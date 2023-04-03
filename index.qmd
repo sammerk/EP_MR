@@ -1,0 +1,140 @@
+---
+title: "Empirische Perspektiven auf Metareflexivität"
+author: "Samuel Merk"
+format:
+  revealjs:
+    controls: true
+    theme: [dark, css/custom.scss]
+    slide-number: true
+    logo: img/PHKA_Logo.svg
+    title-slide-attributes: 
+      data-background-image: /img/stars.jpg
+      data-background-size: cover
+      data-background-opacity: "0.6"
+editor_options: 
+  chunk_output_type: console
+bibliography: bib.bib
+csl: apa7.csl
+---
+
+## {.center background-image="img/stars.jpg" background-opacity=.6}
+
+```{r}
+#| echo: false
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;",
+             ".imp {color:#8cd000;}",
+             ".em05 {font-size:.5em;}",
+              ".em075 {font-size:.75em;}"), 
+           fileConn)
+close(fileConn)
+```
+
+<center>
+### <font color="#8cd000">~~Empirische Perspektiven auf Metareflexivität~~</font>
+### Samuels lose Gedanken bzgl. empirischer Perspektiven auf Metareflexivität
+</center>
+
+## Überblick {.center}
+[{{< fa arrows-left-right >}}]{.imp} Wie lässt sich MR von etablierten Konstrukten abgrenzen?
+
+[{{< fa ruler >}}]{.imp} Welche (Meta-)Maßtheorie kommt prinzipiell in Frage?
+
+[{{< fa list-ol >}}]{.imp} Welche Konstruktklassen kommt in Frage?
+
+[{{< fa question-circle >}}]{.imp} Wozu quantitative Operationaliserung von MR?
+
+::: {.footer}
+Folien unter [bit.ly/merk091 {{< fa external-link >}}]{.imp}
+:::
+
+
+
+
+## Relationierung prox. Konstrukte [{{< fa arrows-left-right >}}]{.imp} 
+![](img/topologie.svg){width=65%}
+<center>[Topologie ausgewählter Merkmale [@cramer2019a]]{.em05}</center>
+
+
+
+## (Meta-)Maßtheorien
+. . .
+
+<br>
+
+:::: {.columns}
+
+::: {.column width='50%'}
+### Reflektives Maß
+![](img/latentV.png){}
+:::
+
+::: {.column width='50%'}
+### Formatives Maß
+![](img/indexV.png){}
+:::
+::::
+<center>[Unterscheidung nach [@edwards2000]]{.em05}</center>
+## Potentielle Konstruktklassen? {.smaller}
+<br>
+```{r}
+konstrukte <- tibble::tribble(
+                        ~Konstrukt,                                        ~`Proposition bzgl. …`,                                     ~Spektrum,
+           "Beliefs/Überzeugungen",                                                  "… Wahrheit",                         "Dichotom/Kontinuierlich: wahr/falsch",
+                     "Goals/Ziele",              "… erreichbarer Zustände/erreichbarem Verhalten",        "Kontinuierlich unipolar: wünschenswert",
+         "Attitudes/Einstellungen",           "… Bewertungen von operationalisierbaren Entitäten",       "Kontinuierlich bipolar: negativ/positiv",
+                    "Values/Werte", "… abstrakter, transsituationaler, nicht erreichbarer Ideale",                           "Ranking: wichtig" )
+knitr::kable(konstrukte)
+```
+<br>
+<center>[Siehe etwa [@skott2015]]{.em075}</center>
+
+
+## Ziele quantitativer Modellierung
+. . .
+
+::: {.panel-tabset}
+
+### Prediction
+::: {.fragment}
+:::: {.columns}
+::: {.column width='50%'}
+![](img/geocentric.png){width="94%"}
+:::
+
+::: {.column width='50%'}
+![](img/mercury_retrograde_11.jpeg){width="85%"}
+:::
+:::
+::::
+
+
+
+### Explanation
+<br><br>
+<center>![](img/DAG.png){width="80%"}  
+[Beispiel nach [@rohrer2018]]{.em05}
+</center>
+
+### Exploration
+<br>
+<center>![](img/cluster.png){width="60%"}
+</center>
+
+
+### Description
+
+<br>
+<center>![](img/gini.png){width="48%"}</center>
+
+
+:::
+
+
+## Literatur
