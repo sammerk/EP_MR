@@ -3,12 +3,13 @@ title: "Empirische Perspektiven auf Metareflexivität"
 author: "Samuel Merk"
 format:
   revealjs:
+    embed-resources: true
     controls: true
     theme: [dark, css/custom.scss]
     slide-number: true
     logo: img/PHKA_Logo.svg
     title-slide-attributes: 
-      data-background-image: /img/stars.jpg
+      data-background-image: img/stars.jpg
       data-background-size: cover
       data-background-opacity: "0.6"
 editor_options: 
